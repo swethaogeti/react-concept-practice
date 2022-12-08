@@ -64,7 +64,7 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
+  font-family:  'Courier New', Courier, monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 

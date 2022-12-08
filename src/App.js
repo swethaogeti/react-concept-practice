@@ -1,11 +1,13 @@
 import React from "react";
+import { SharingData } from "./concepts/sharingData/SharingDataApp";
 import "./styles.css";
 import "./styles/tailwind-pre-build.css";
 
 export default function App() {
   return (
     <div className="text-2xl">
-      <h2 className="bg-green-400">sweety</h2>
+      <h2 className="bg-gray-200">Concepts Practice</h2>
+      <SharingData />
     </div>
   );
 }
