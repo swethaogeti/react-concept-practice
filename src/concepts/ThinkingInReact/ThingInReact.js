@@ -1,29 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 
 const FilterableTable = ({ products }) => {
+  const [filterText, setFilterText] = useState("");
+  const [inStockOnly, setInStockOnly] = useState(false);
   return (
     <div>
-      <SearchBox />
-      <ProductTable products={products} />
+      <SearchBox
+        filterText={filterText}
+        setFilterText={setFilterText}
+        inStockOnly={inStockOnly}
+        setInStockOnly={setInStockOnly}
+      />
+      <ProductTable
+        products={products}
+        inStockOnly={inStockOnly}
+        filterText={filterText}
+      />
     </div>
   );
 };
 
-const SearchBox = () => {
-  return (
-    <div>
-      <input placeholder="search here"></input>
-      <input type="checkbox"></input>
-      <span>Only show products in stock</span>
-    </div>
-  );
-};
-
-const ProductTable = ({ products }) => {
+const ProductTable = ({ products, filterText, inStockOnly }) => {
   let lastCategory = null;
   const rows = [];
   products.forEach((product) => {
-    if (product !== lastCategory) {
+    if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
+      return;
+    }
+
+    if (inStockOnly && !product.stocked) {
+      return;
+    }
+
+    if (product.category !== lastCategory) {
       rows.push(
         <ProductCategoryRow
           category={product.category}
@@ -44,6 +53,28 @@ const ProductTable = ({ products }) => {
       </thead>
       <tbody>{rows}</tbody>
     </table>
+  );
+};
+const SearchBox = ({
+  filterText,
+  inStockOnly,
+  setFilterText,
+  setInStockOnly
+}) => {
+  return (
+    <form>
+      <input
+        value={filterText}
+        placeholder="search here"
+        onChange={(e) => setFilterText(e.target.value)}
+      ></input>
+      <input
+        type="checkbox"
+        checked={inStockOnly}
+        onChange={(e) => setInStockOnly(e.target.checked)}
+      ></input>
+      <span>Only show products in stock</span>
+    </form>
   );
 };
 
