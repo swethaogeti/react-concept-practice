@@ -11,7 +11,7 @@ export default function App() {
       <h2 className="bg-gray-200">Concepts Practice</h2>
       {/* <SharingData /> */}
       {/* <ThinkingInReact /> */}
-      <ComponentsMemory />
+      {/* <ComponentsMemory /> */}
     </div>
   );
 }
