@@ -2,6 +2,7 @@ import React from "react";
 import { ComponentsMemory } from "./concepts/componentsMemory/ComponentsMemory";
 import { SharingData } from "./concepts/sharingData/SharingDataApp";
 import { ThinkingInReact } from "./concepts/ThinkingInReact/ThingInReact";
+import { GroceryList } from "./practiceQuestions/groceryList/GroceryList";
 import { Person } from "./practiceQuestions/Person";
 import "./styles.css";
 // import "./styles/tailwind-pre-build.css";
@@ -13,7 +14,8 @@ export default function App() {
       {/* <SharingData /> */}
       {/* <ThinkingInReact /> */}
       {/* <ComponentsMemory /> */}
-      <Person />
+      {/* <Person /> */}
+      <GroceryList />
     </div>
   );
 }
