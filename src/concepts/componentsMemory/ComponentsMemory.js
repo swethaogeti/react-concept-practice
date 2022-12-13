@@ -10,12 +10,19 @@ export const ComponentsMemory = () => {
       setNextIndex((prev) => prev + 1);
     }
   };
+  const handlePrev = () => {
+    if (nextIndex > 0) {
+      setNextIndex((next) => next - 1);
+    }
+  };
   const handleShowDetails = () => {
     setToggle((prev) => !prev);
   };
   return (
     <>
+      <button onClick={handlePrev}>Prev </button>
       <button onClick={handleNext}>Next</button>
+
       <h3>
         ({nextIndex + 1} of {sculptureList.length})
       </h3>

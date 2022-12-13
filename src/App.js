@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentsMemory } from "./concepts/componentsMemory/ComponentsMemory";
 import { SharingData } from "./concepts/sharingData/SharingDataApp";
+import { Message } from "./concepts/stateASnapshot/Message";
 import { ThinkingInReact } from "./concepts/ThinkingInReact/ThingInReact";
 import { GroceryList } from "./practiceQuestions/groceryList/GroceryList";
 import { Person } from "./practiceQuestions/Person";
@@ -15,7 +16,8 @@ export default function App() {
       {/* <ThinkingInReact /> */}
       {/* <ComponentsMemory /> */}
       {/* <Person /> */}
-      <GroceryList />
+      {/* <GroceryList /> */}
+      <Message />
     </div>
   );
 }
