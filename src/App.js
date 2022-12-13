@@ -1,4 +1,5 @@
 import React from "react";
+import { ObjectInState } from "./components/objectsInState/ObjectInState";
 import { ComponentsMemory } from "./concepts/componentsMemory/ComponentsMemory";
 import { SharingData } from "./concepts/sharingData/SharingDataApp";
 import { Message } from "./concepts/stateASnapshot/Message";
@@ -17,7 +18,8 @@ export default function App() {
       {/* <ComponentsMemory /> */}
       {/* <Person /> */}
       {/* <GroceryList /> */}
-      <Message />
+      {/* <Message /> */}
+      <ObjectInState />
     </div>
   );
 }
