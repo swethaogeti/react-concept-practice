@@ -1,5 +1,5 @@
 import React from "react";
-import { ObjectInState } from "./components/objectsInState/ObjectInState";
+import { ObjectInState } from "./concepts/objectsInState/ObjectInState";
 import { ComponentsMemory } from "./concepts/componentsMemory/ComponentsMemory";
 import { SharingData } from "./concepts/sharingData/SharingDataApp";
 import { Message } from "./concepts/stateASnapshot/Message";
@@ -7,6 +7,7 @@ import { ThinkingInReact } from "./concepts/ThinkingInReact/ThingInReact";
 import { GroceryList } from "./practiceQuestions/groceryList/GroceryList";
 import { Person } from "./practiceQuestions/Person";
 import "./styles.css";
+import { NestedObject } from "./concepts/objectsInState/NestedObject";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -19,7 +20,8 @@ export default function App() {
       {/* <Person /> */}
       {/* <GroceryList /> */}
       {/* <Message /> */}
-      <ObjectInState />
+      {/* <ObjectInState /> */}
+      <NestedObject />
     </div>
   );
 }
