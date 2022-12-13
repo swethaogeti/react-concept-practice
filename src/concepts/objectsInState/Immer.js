@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import { useImmer } from "use-immer";
-export const NestedObject = () => {
-  const [person, setPerson] = useState({
+export const Immer = () => {
+  const [person, setPerson] = useImmer({
     name: "Niki de Saint Phalle",
     artwork: {
       title: "Blue Nana",
@@ -10,27 +9,25 @@ export const NestedObject = () => {
     }
   });
 
-  function handleNameChange(e) {
-    setPerson({ ...person, name: e.target.value });
+  function handleTitleChange(e) {
+    setPerson((draft) => (draft.artwork.title = e.target.value));
   }
+
+  function handleNameChange(e) {
+    setPerson((draft) => {
+      draft.name = e.target.value;
+    });
+  }
+
   function handleCityChange(e) {
-    setPerson({
-      ...person,
-      artwork: { ...person.artwork, city: e.target.value }
+    setPerson((draft) => {
+      draft.artwork.city = e.target.value;
     });
   }
 
   function handleImageChange(e) {
-    setPerson({
-      ...person,
-      artwork: { ...person.artwork, image: e.target.value }
-    });
-  }
-
-  function handleTitleChange(e) {
-    setPerson({
-      ...person,
-      artwork: { ...person.artwork, title: e.target.value }
+    setPerson((draft) => {
+      draft.artwork.image = e.target.value;
     });
   }
   return (
