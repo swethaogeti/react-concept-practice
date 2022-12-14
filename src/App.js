@@ -11,6 +11,7 @@ import { NestedObject } from "./concepts/objectsInState/NestedObject";
 import {
   ArrayAdding,
   ArrayDelete,
+  ArrayInsertion,
   ArrayReplace,
   ArrayTransform
 } from "./concepts/arrayInState/ArrayInState";
@@ -31,7 +32,8 @@ export default function App() {
       {/* <ArrayAdding/>
       <ArrayDelete/> */}
       {/* <ArrayTransform /> */}
-      <ArrayReplace />
+      {/* <ArrayReplace /> */}
+      <ArrayInsertion />
     </div>
   );
 }

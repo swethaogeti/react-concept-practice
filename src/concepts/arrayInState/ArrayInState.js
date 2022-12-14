@@ -141,3 +141,42 @@ export const ArrayReplace = () => {
     </>
   );
 };
+
+//insertion into an array use ...arr together with the slice()
+
+export const ArrayInsertion = () => {
+  const initialArtists = [
+    { id: 0, name: "Marta Colvin Andrade" },
+    { id: 1, name: "Lamidi Olonade Fakeye" },
+    { id: 2, name: "Louise Nevelson" }
+  ];
+
+  const [name, setName] = useState("");
+  const [list, setList] = useState(initialArtists);
+
+  const handleInsert = () => {
+    const insertAt = 1;
+    const nextArtist = [
+      ...list.slice(0, insertAt),
+      { id: Math.random(), name: name },
+      ...list.slice(insertAt)
+    ];
+
+    setList(nextArtist);
+    setName("");
+  };
+  return (
+    <>
+      <h1>Array insertion</h1>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      ></input>
+      <button onClick={handleInsert}>Insert</button>
+      {list.map((item) => {
+        return <li key={item.id}>{item.name}</li>;
+      })}
+    </>
+  );
+};
