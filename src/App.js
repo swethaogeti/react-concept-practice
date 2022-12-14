@@ -17,6 +17,7 @@ import {
   ArrayTransform,
   ObjectInArray
 } from "./concepts/arrayInState/ArrayInState";
+import { TodoList } from "./concepts/arrayInState/todoList/TodoList";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -37,7 +38,8 @@ export default function App() {
       {/* <ArrayReplace /> */}
       {/* <ArrayInsertion /> */}
       {/* <ArrayReverse /> */}
-      <ObjectInArray />
+      {/* <ObjectInArray /> */}
+      <TodoList />
     </div>
   );
 }
