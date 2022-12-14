@@ -11,6 +11,7 @@ import { NestedObject } from "./concepts/objectsInState/NestedObject";
 import {
   ArrayAdding,
   ArrayDelete,
+  ArrayReplace,
   ArrayTransform
 } from "./concepts/arrayInState/ArrayInState";
 // import "./styles/tailwind-pre-build.css";
@@ -29,7 +30,8 @@ export default function App() {
       {/* <NestedObject /> */}
       {/* <ArrayAdding/>
       <ArrayDelete/> */}
-      <ArrayTransform />
+      {/* <ArrayTransform /> */}
+      <ArrayReplace />
     </div>
   );
 }

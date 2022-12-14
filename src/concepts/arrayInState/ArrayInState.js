@@ -111,3 +111,33 @@ export const ArrayTransform = () => {
     </>
   );
 };
+
+//replace items in an array use map
+
+export const ArrayReplace = () => {
+  let initialCounters = [0, 0, 0];
+
+  const [counters, setCounters] = useState(initialCounters);
+
+  const handleIncrement = (index) => {
+    const nextCounters = counters.map((c, i) => {
+      if (index === i) {
+        return c + 1;
+      }
+      return c;
+    });
+    setCounters(nextCounters);
+  };
+  return (
+    <>
+      <h1>Replace the array </h1>
+      {counters.map((counter, i) => (
+        <div key={i}>
+          <p>
+            {counter} <button onClick={() => handleIncrement(i)}>+1</button>
+          </p>
+        </div>
+      ))}
+    </>
+  );
+};
