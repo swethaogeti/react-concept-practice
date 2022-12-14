@@ -8,6 +8,11 @@ import { GroceryList } from "./practiceQuestions/groceryList/GroceryList";
 import { Person } from "./practiceQuestions/Person";
 import "./styles.css";
 import { NestedObject } from "./concepts/objectsInState/NestedObject";
+import {
+  ArrayAdding,
+  ArrayDelete,
+  ArrayTransform
+} from "./concepts/arrayInState/ArrayInState";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -21,7 +26,10 @@ export default function App() {
       {/* <GroceryList /> */}
       {/* <Message /> */}
       {/* <ObjectInState /> */}
-      <NestedObject />
+      {/* <NestedObject /> */}
+      {/* <ArrayAdding/>
+      <ArrayDelete/> */}
+      <ArrayTransform />
     </div>
   );
 }
