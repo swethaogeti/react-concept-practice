@@ -206,3 +206,65 @@ export const ArrayReverse = () => {
     </>
   );
 };
+
+export const ObjectInArray = () => {
+  const initialList = [
+    { id: 0, title: "Big Bellies", seen: false },
+    { id: 1, title: "Lunar Landscape", seen: false },
+    { id: 2, title: "Terracotta Army", seen: true }
+  ];
+  const [myList, setMyList] = useState(initialList);
+  const [yourList, setYourList] = useState(initialList);
+
+  const handleToogleMyList = (artId, nextSeen) => {
+    setMyList(
+      myList.map((artwork) => {
+        if (artwork.id === artId) {
+          return { ...artwork, seen: nextSeen };
+        } else {
+          return artwork;
+        }
+      })
+    );
+  };
+
+  const handletoggleYourList = (artId, nextSeen) => {
+    setYourList(
+      yourList.map((artwork) => {
+        if (artwork.id === artId) {
+          return { ...artwork, seen: nextSeen };
+        } else {
+          return artwork;
+        }
+      })
+    );
+  };
+  return (
+    <>
+      <h1>Updating object inside the array</h1>
+      <h2>My list of art to see</h2>
+      <ItemList artworks={myList} onToggle={handleToogleMyList} />
+      <h2>Yourlist of art to see</h2>
+      <ItemList artworks={yourList} onToggle={handletoggleYourList} />
+    </>
+  );
+};
+
+function ItemList({ artworks, onToggle }) {
+  return (
+    <ul>
+      {artworks.map((artwork) => (
+        <li key={artwork.id}>
+          <label>
+            <input
+              type="checkbox"
+              checked={artwork.seen}
+              onChange={(e) => onToggle(artwork.id, e.target.checked)}
+            ></input>
+            {artwork.title}
+          </label>
+        </li>
+      ))}
+    </ul>
+  );
+}

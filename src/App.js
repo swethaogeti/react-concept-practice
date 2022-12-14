@@ -14,7 +14,8 @@ import {
   ArrayInsertion,
   ArrayReplace,
   ArrayReverse,
-  ArrayTransform
+  ArrayTransform,
+  ObjectInArray
 } from "./concepts/arrayInState/ArrayInState";
 // import "./styles/tailwind-pre-build.css";
 
@@ -35,7 +36,8 @@ export default function App() {
       {/* <ArrayTransform /> */}
       {/* <ArrayReplace /> */}
       {/* <ArrayInsertion /> */}
-      <ArrayReverse />
+      {/* <ArrayReverse /> */}
+      <ObjectInArray />
     </div>
   );
 }
