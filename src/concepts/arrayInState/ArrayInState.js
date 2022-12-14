@@ -180,3 +180,29 @@ export const ArrayInsertion = () => {
     </>
   );
 };
+
+//making other changes to an array
+//reverse or sort
+
+export const ArrayReverse = () => {
+  const initialList = [
+    { id: 0, title: "Big Bellies" },
+    { id: 1, title: "Lunar Landscape" },
+    { id: 2, title: "Terracotta Army" }
+  ];
+  const [list, setList] = useState(initialList);
+
+  const handleReverse = () => {
+    const reverseList = [...list];
+    setList(reverseList.reverse());
+  };
+  return (
+    <>
+      <h1>array reverse</h1>
+      <button onClick={handleReverse}>Remove</button>
+      {list.map((item) => (
+        <li key={item.id}>{item.title}</li>
+      ))}
+    </>
+  );
+};
