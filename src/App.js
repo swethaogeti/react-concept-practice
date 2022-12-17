@@ -20,6 +20,7 @@ import {
 import { TodoList } from "./concepts/arrayInState/todoList/TodoList";
 import { ThankyouForm } from "./concepts/managingState/ThankyouForm";
 import { BgActive } from "./concepts/managingState/BgActive";
+import { ProfileEditor } from "./concepts/managingState/ProfileEditor";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -43,7 +44,8 @@ export default function App() {
       {/* <ObjectInArray /> */}
       {/* <TodoList /> */}
       {/* <ThankyouForm /> */}
-      <BgActive />
+      {/* <BgActive /> */}
+      <ProfileEditor />
     </div>
   );
 }
