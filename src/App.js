@@ -22,6 +22,7 @@ import { ThankyouForm } from "./concepts/managingState/ThankyouForm";
 import { BgActive } from "./concepts/managingState/BgActive";
 import { ProfileEditor } from "./concepts/managingState/ProfileEditor";
 import { FeedBackForm } from "./concepts/managingState/FeedbackForm";
+import { SelectItem } from "./concepts/managingState/SelectItem";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -47,7 +48,8 @@ export default function App() {
       {/* <ThankyouForm /> */}
       {/* <BgActive /> */}
       {/* <ProfileEditor /> */}
-      <FeedBackForm />
+      {/* <FeedBackForm /> */}
+      <SelectItem />
     </div>
   );
 }
