@@ -18,6 +18,7 @@ import {
   ObjectInArray
 } from "./concepts/arrayInState/ArrayInState";
 import { TodoList } from "./concepts/arrayInState/todoList/TodoList";
+import { ThankyouForm } from "./concepts/managingState/ThankyouForm";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -39,7 +40,8 @@ export default function App() {
       {/* <ArrayInsertion /> */}
       {/* <ArrayReverse /> */}
       {/* <ObjectInArray /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <ThankyouForm />
     </div>
   );
 }
