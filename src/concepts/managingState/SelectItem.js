@@ -8,15 +8,33 @@ export const SelectItem = () => {
   ];
   const [list, setList] = useState(initialItems);
   const [select, setSelect] = useState(list[0]);
+
+  const handleInputs = (id, e) => {
+    setList(
+      list.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            title: e.target.value
+          };
+        } else {
+          return item;
+        }
+      })
+    );
+  };
   return (
     <div>
       <h1>Select Item From the list</h1>
       {list.map((item) => {
         return (
-          <li key={item.id}>
-            {item.title}
+          <>
+            <input
+              value={item.title}
+              onChange={(e) => handleInputs(item.id, e)}
+            ></input>
             <button onClick={() => setSelect(item)}>Choose</button>
-          </li>
+          </>
         );
       })}
       <h3>You picked {select.title}</h3>
