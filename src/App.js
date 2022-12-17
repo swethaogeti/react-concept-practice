@@ -23,6 +23,7 @@ import { BgActive } from "./concepts/managingState/BgActive";
 import { ProfileEditor } from "./concepts/managingState/ProfileEditor";
 import { FeedBackForm } from "./concepts/managingState/FeedbackForm";
 import { SelectItem } from "./concepts/managingState/SelectItem";
+import { ClockPage } from "./concepts/managingState/clock/ClockPage";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -49,7 +50,8 @@ export default function App() {
       {/* <BgActive /> */}
       {/* <ProfileEditor /> */}
       {/* <FeedBackForm /> */}
-      <SelectItem />
+      {/* <SelectItem /> */}
+      <ClockPage />
     </div>
   );
 }
