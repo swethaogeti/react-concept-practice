@@ -23,6 +23,8 @@ export const SelectItem = () => {
       })
     );
   };
+
+  const selectedItem = list.find((item) => item.id === select.id);
   return (
     <div>
       <h1>Select Item From the list</h1>
@@ -37,7 +39,7 @@ export const SelectItem = () => {
           </>
         );
       })}
-      <h3>You picked {select.title}</h3>
+      <h3>You picked {selectedItem.title}</h3>
     </div>
   );
 };
