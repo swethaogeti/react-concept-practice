@@ -29,6 +29,7 @@ import { DissaperingSelection } from "./concepts/managingState/disapperingState/
 import { MultipleSelection } from "./concepts/managingState/multipleSelections/MultipleSelection";
 import { SharingState } from "./concepts/managingState/SharingState";
 import { SyncedInputs } from "./concepts/managingState/SyncedInputs";
+import { SearchItem } from "./concepts/managingState/SearchItem";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -60,7 +61,8 @@ export default function App() {
       {/* <BrokenPackage /> */}
       {/* <DissaperingSelection /> */}
       {/* <SharingState /> */}
-      <SyncedInputs />
+      {/* <SyncedInputs /> */}
+      <SearchItem />
     </div>
   );
 }
