@@ -25,6 +25,7 @@ import { FeedBackForm } from "./concepts/managingState/FeedbackForm";
 import { SelectItem } from "./concepts/managingState/SelectItem";
 import { ClockPage } from "./concepts/managingState/clock/ClockPage";
 import { BrokenPackage } from "./concepts/managingState/packageList/BrokenPackage";
+import { DissaperingSelection } from "./concepts/managingState/disapperingState/DisappearingSelection";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -53,7 +54,8 @@ export default function App() {
       {/* <FeedBackForm /> */}
       {/* <SelectItem /> */}
       {/* <ClockPage /> */}
-      <BrokenPackage />
+      {/* <BrokenPackage /> */}
+      <DissaperingSelection />
     </div>
   );
 }
