@@ -31,6 +31,7 @@ import { SharingState } from "./concepts/managingState/SharingState";
 import { SyncedInputs } from "./concepts/managingState/SyncedInputs";
 import { SearchItem } from "./concepts/managingState/SearchItem";
 import { PreservingState } from "./concepts/managingState/PreservingState";
+import { ChatApp } from "./concepts/managingState/chatApp/ChatApp";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -64,7 +65,8 @@ export default function App() {
       {/* <SharingState /> */}
       {/* <SyncedInputs /> */}
       {/* <SearchItem /> */}
-      <PreservingState />
+      {/* <PreservingState /> */}
+      <ChatApp />
     </div>
   );
 }
