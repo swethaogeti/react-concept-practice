@@ -33,6 +33,7 @@ import { SearchItem } from "./concepts/managingState/SearchItem";
 import { PreservingState } from "./concepts/managingState/PreservingState";
 import { ChatApp } from "./concepts/managingState/chatApp/ChatApp";
 import { ShowHint } from "./concepts/managingState/ShowHint";
+import { ResetDetails } from "./concepts/managingState/ResetDetails";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -69,7 +70,8 @@ export default function App() {
       {/* <PreservingState /> */}
       {/* <ChatApp /> */}
 
-      <ShowHint />
+      {/* <ShowHint /> */}
+      <ResetDetails />
     </div>
   );
 }
