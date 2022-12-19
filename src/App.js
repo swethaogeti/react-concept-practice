@@ -32,6 +32,7 @@ import { SyncedInputs } from "./concepts/managingState/SyncedInputs";
 import { SearchItem } from "./concepts/managingState/SearchItem";
 import { PreservingState } from "./concepts/managingState/PreservingState";
 import { ChatApp } from "./concepts/managingState/chatApp/ChatApp";
+import { ShowHint } from "./concepts/managingState/ShowHint";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -66,7 +67,9 @@ export default function App() {
       {/* <SyncedInputs /> */}
       {/* <SearchItem /> */}
       {/* <PreservingState /> */}
-      <ChatApp />
+      {/* <ChatApp /> */}
+
+      <ShowHint />
     </div>
   );
 }
