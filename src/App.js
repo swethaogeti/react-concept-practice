@@ -35,6 +35,7 @@ import { ChatApp } from "./concepts/managingState/chatApp/ChatApp";
 import { ShowHint } from "./concepts/managingState/ShowHint";
 import { ResetDetails } from "./concepts/managingState/ResetDetails";
 import { NextImg } from "./concepts/managingState/NextImg";
+import { MisplaceState } from "./concepts/managingState/MisplaceState";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -73,7 +74,8 @@ export default function App() {
 
       {/* <ShowHint /> */}
       {/* <ResetDetails /> */}
-      <NextImg />
+      {/* <NextImg /> */}
+      <MisplaceState />
     </div>
   );
 }
