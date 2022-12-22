@@ -37,6 +37,7 @@ import { ResetDetails } from "./concepts/managingState/ResetDetails";
 import { NextImg } from "./concepts/managingState/NextImg";
 import { MisplaceState } from "./concepts/managingState/MisplaceState";
 import { Reducer } from "./concepts/Reducer";
+import { Gallery } from "./concepts/managingState/context/Gallery";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -77,7 +78,9 @@ export default function App() {
       {/* <ResetDetails /> */}
       {/* <NextImg /> */}
       {/* <MisplaceState /> */}
-      <Reducer />
+      {/* <Reducer /> */}
+
+      <Gallery />
     </div>
   );
 }
