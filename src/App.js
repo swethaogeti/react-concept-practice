@@ -81,7 +81,7 @@ export default function App() {
       {/* <MisplaceState /> */}
       {/* <Reducer /> */}
 
-      {/* <Gallery /> */}
+      <Gallery />
       <TaskApp />
     </div>
   );
