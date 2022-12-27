@@ -1,15 +1,20 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 
 export const UseMemo = () => {
   const [number, setNumber] = useState(0);
   const [dark, setDark] = useState(false);
   const doubleNumber = useMemo(() => slowFunction(number), [number]);
-  const themeStyles = {
-    backgroundColor: dark ? "black" : "pink",
-    color: dark ? "white" : "black",
-    width: "200px",
-    height: "200px"
-  };
+  const themeStyles = useMemo(() => {
+    return {
+      backgroundColor: dark ? "black" : "pink",
+      color: dark ? "white" : "black",
+      width: "200px",
+      height: "200px"
+    };
+  }, [dark]);
+  useEffect(() => {
+    console.log("theme changed");
+  }, [themeStyles]);
   return (
     <>
       <input value={number} onChange={(e) => setNumber(e.target.value)}></input>
