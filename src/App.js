@@ -39,6 +39,7 @@ import { MisplaceState } from "./concepts/managingState/MisplaceState";
 import { Reducer } from "./concepts/Reducer";
 import { Gallery } from "./concepts/managingState/context/Gallery";
 import { TaskApp } from "./concepts/managingState/contextApi/App";
+import { UseMemo } from "./hooks/UseMemo";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -81,8 +82,10 @@ export default function App() {
       {/* <MisplaceState /> */}
       {/* <Reducer /> */}
 
-      <Gallery />
-      <TaskApp />
+      {/* <Gallery />
+      <TaskApp /> */}
+
+      <UseMemo />
     </div>
   );
 }
