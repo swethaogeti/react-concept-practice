@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 export const UseCallback = () => {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(1);
   const [dark, setDark] = useState(false);
-  const getItems = () => {
-    return [number, number + Number(1), number + Number(2)];
-  };
+
+  const getItems = useCallback(() => {
+    return [number, number + 1, number + 2];
+  }, [number]);
   const theme = {
     backgroundColor: dark ? "black" : "pink",
     color: dark ? "white" : "black"
