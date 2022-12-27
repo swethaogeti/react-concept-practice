@@ -40,6 +40,7 @@ import { Reducer } from "./concepts/Reducer";
 import { Gallery } from "./concepts/managingState/context/Gallery";
 import { TaskApp } from "./concepts/managingState/contextApi/App";
 import { UseMemo } from "./hooks/UseMemo";
+import { UseCallback } from "./hooks/UseCallback";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -85,7 +86,8 @@ export default function App() {
       {/* <Gallery />
       <TaskApp /> */}
 
-      <UseMemo />
+      {/* <UseMemo /> */}
+      <UseCallback />
     </div>
   );
 }
