@@ -41,6 +41,7 @@ import { Gallery } from "./concepts/managingState/context/Gallery";
 import { TaskApp } from "./concepts/managingState/contextApi/App";
 import { UseMemo } from "./hooks/UseMemo";
 import { UseCallback } from "./hooks/UseCallback";
+import { CodeSplitting } from "./codesplitting/App";
 // import "./styles/tailwind-pre-build.css";
 
 export default function App() {
@@ -87,7 +88,8 @@ export default function App() {
       <TaskApp /> */}
 
       {/* <UseMemo /> */}
-      <UseCallback />
+      {/* <UseCallback /> */}
+      <CodeSplitting />
     </div>
   );
 }
