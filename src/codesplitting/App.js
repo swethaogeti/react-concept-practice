@@ -1,8 +1,18 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes, Link, Outlet } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
-import Store from "./components/Store";
+// import {About} from "./components/About";
+//  import Home from "./components/Home";
+// import Store from "./components/Store";
+// const Home=lazy(()=>import('./components/Home'))
+const Home = lazy(() => wait(1000).then(() => import("./components/Home")));
+const Store = lazy(() => wait(1000).then(() => import("./components/Store")));
+const About = lazy(() =>
+  wait(1000)
+    .then(() => import("./components/About"))
+    .then((module) => {
+      return { default: module.About };
+    })
+);
 export function CodeSplitting() {
   return (
     <>
@@ -13,7 +23,6 @@ export function CodeSplitting() {
           <Route path="/about" element={<About />}></Route>
         </Route>
       </Routes>
-      <h1>swetha</h1>
     </>
   );
 }
@@ -26,7 +35,15 @@ function NavWrapper() {
         <Link to="/store">Store</Link>
         <Link to="/about">About</Link>
       </nav>
-      <Outlet />
+      <Suspense fallback={<h1>loading</h1>}>
+        <Outlet />
+      </Suspense>
     </>
   );
+}
+
+function wait(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
 }
