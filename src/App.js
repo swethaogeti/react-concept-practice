@@ -95,7 +95,7 @@ export default function App() {
       {/* <Pagination /> */}
 
       {/* <ClassApp /> */}
-      <ClassName />
+      {/* <ClassName /> */}
     </div>
   );
 }
