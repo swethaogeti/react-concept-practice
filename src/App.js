@@ -43,8 +43,9 @@ import { UseMemo } from "./hooks/UseMemo";
 import { UseCallback } from "./hooks/UseCallback";
 import { CodeSplitting } from "./codesplitting/App";
 import { Pagination } from "./pagination/Pagination";
-import "./styles/tailwind-pre-build.css";
+// import "./styles/tailwind-pre-build.css";
 import { ClassApp, ClassName } from "./classbasedComponent/ClassApp";
+import { CounterReduxApp } from "./redux-toolKit/CounterReduxApp";
 
 export default function App() {
   return (
@@ -96,6 +97,7 @@ export default function App() {
 
       {/* <ClassApp /> */}
       {/* <ClassName /> */}
+      <CounterReduxApp />
     </div>
   );
 }
