@@ -46,6 +46,7 @@ import { Pagination } from "./pagination/Pagination";
 // import "./styles/tailwind-pre-build.css";
 import { ClassApp, ClassName } from "./classbasedComponent/ClassApp";
 import { CounterReduxApp } from "./redux-toolKit/CounterReduxApp";
+import { ProductListing } from "./shopping-cart-redux/pages/ProductListing";
 
 export default function App() {
   return (
@@ -97,7 +98,9 @@ export default function App() {
 
       {/* <ClassApp /> */}
       {/* <ClassName /> */}
-      <CounterReduxApp />
+      {/* <CounterReduxApp /> */}
+
+      <ProductListing />
     </div>
   );
 }

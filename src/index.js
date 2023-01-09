@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import App from "./App";
 
-import { store } from "./redux-toolKit/store";
+import { store } from "./shopping-cart-redux/store";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <BrowserRouter>
