@@ -8,9 +8,7 @@ import { store } from "./shopping-cart-redux/store";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <BrowserRouter>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <App />
   </BrowserRouter>,
   rootElement
 );

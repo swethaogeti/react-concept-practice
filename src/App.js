@@ -1,4 +1,3 @@
-import React from "react";
 import { ObjectInState } from "./concepts/objectsInState/ObjectInState";
 import { ComponentsMemory } from "./concepts/componentsMemory/ComponentsMemory";
 import { SharingData } from "./concepts/sharingData/SharingDataApp";
@@ -17,6 +16,7 @@ import {
   ArrayTransform,
   ObjectInArray
 } from "./concepts/arrayInState/ArrayInState";
+
 import { TodoList } from "./concepts/arrayInState/todoList/TodoList";
 import { ThankyouForm } from "./concepts/managingState/ThankyouForm";
 import { BgActive } from "./concepts/managingState/BgActive";
@@ -47,6 +47,11 @@ import { Pagination } from "./pagination/Pagination";
 import { ClassApp, ClassName } from "./classbasedComponent/ClassApp";
 import { CounterReduxApp } from "./redux-toolKit/CounterReduxApp";
 import { ProductListing } from "./shopping-cart-redux/pages/ProductListing";
+import { CounterHook } from "./hooks/customHooks/CounterHook";
+import { PureComponentEx } from "./pureComponets/PureComponentEx";
+import React from "react";
+import { Container } from "./HOC/HighOrderComponent";
+import { SayHi } from "./HOC/SayHi";
 
 export default function App() {
   return (
@@ -100,7 +105,10 @@ export default function App() {
       {/* <ClassName /> */}
       {/* <CounterReduxApp /> */}
 
-      <ProductListing />
+      {/* <ProductListing /> */}
+      {/* <CounterHook /> */}
+      {/* <PureComponentEx /> */}
+      <SayHi />
     </div>
   );
 }
