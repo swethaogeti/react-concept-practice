@@ -52,6 +52,10 @@ import { PureComponentEx } from "./pureComponets/PureComponentEx";
 import React from "react";
 import { Container } from "./HOC/HighOrderComponent";
 import { SayHi } from "./HOC/SayHi";
+import { StopWatch } from "./escape-hatches/refs/StopWatch";
+import { LatestState } from "./escape-hatches/refs/LatestState";
+import { CounterHookCustom } from "./hooks/customHooks/useCounterWatch";
+import { RandomNumber } from "./hooks/customHooks/useMinMax";
 
 export default function App() {
   return (
@@ -108,7 +112,12 @@ export default function App() {
       {/* <ProductListing /> */}
       {/* <CounterHook /> */}
       {/* <PureComponentEx /> */}
-      <SayHi />
+      {/* <SayHi /> */}
+
+      {/* <StopWatch/> */}
+      {/* <LatestState /> */}
+      {/* <CounterHookCustom /> */}
+      <RandomNumber />
     </div>
   );
 }

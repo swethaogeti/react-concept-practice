@@ -15,15 +15,12 @@ export const PureComponentEx = () => {
     );
 
     return () => clearTimeout(timeout);
-  });
+  }, [detials]);
   return (
     <>
       <h1>This is Pure Component</h1>
-      <ParentComponent
-        // id={detials.id}
-        name={detials.name}
-        city={detials.city}
-      />
+      <h2>{detials.id}</h2>
+      <ParentComponent name={detials.name} city={detials.city} />
     </>
   );
 };
