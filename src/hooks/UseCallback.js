@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState } from "react";
-
+import React, { memo, useCallback, useEffect, useState } from "react";
+import Todos from "./customHooks/Todo";
 export const UseCallback = () => {
   const [number, setNumber] = useState(1);
   const [dark, setDark] = useState(false);
@@ -32,6 +32,29 @@ const List = ({ getItems }) => {
       {items.map((i) => (
         <p key={i}>{i}</p>
       ))}
+    </>
+  );
+};
+
+export const CallbackHook = () => {
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
+
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+  const addTodo = useCallback(() => {
+    setTodos((t) => [...t, "New Todo"]);
+  }, [todos]);
+
+  return (
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
     </>
   );
 };

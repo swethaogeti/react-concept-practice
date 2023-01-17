@@ -39,8 +39,8 @@ import { MisplaceState } from "./concepts/managingState/MisplaceState";
 import { Reducer } from "./concepts/Reducer";
 import { Gallery } from "./concepts/managingState/context/Gallery";
 import { TaskApp } from "./concepts/managingState/contextApi/App";
-import { UseMemo } from "./hooks/UseMemo";
-import { UseCallback } from "./hooks/UseCallback";
+import { MemoHook, UseMemo } from "./hooks/UseMemo";
+import { CallbackHook, UseCallback } from "./hooks/UseCallback";
 import { CodeSplitting } from "./codesplitting/App";
 import { Pagination } from "./pagination/Pagination";
 // import "./styles/tailwind-pre-build.css";
@@ -56,6 +56,16 @@ import { StopWatch } from "./escape-hatches/refs/StopWatch";
 import { LatestState } from "./escape-hatches/refs/LatestState";
 import { CounterHookCustom } from "./hooks/customHooks/useCounterWatch";
 import { RandomNumber } from "./hooks/customHooks/useMinMax";
+import { UseRef } from "./hooks/customHooks/UseRef";
+import { MyContextApp, UseContext, UseContextHook } from "./hooks/UseContext";
+import { UseEffectHook } from "./hooks/UseEffect";
+import {
+  AppInterSectionApi,
+  AppWindowListener
+} from "./hooks/customHooks/hooks";
+import { AddTodoApp, ShoppingCart } from "./AddStatePracticeSet";
+import { TodoReducerApp } from "./TodoReducerApp";
+import { MyTodoApp } from "./TodoAppContext/MyTodoApp";
 
 export default function App() {
   return (
@@ -117,7 +127,21 @@ export default function App() {
       {/* <StopWatch/> */}
       {/* <LatestState /> */}
       {/* <CounterHookCustom /> */}
-      <RandomNumber />
+      {/* <RandomNumber /> */}
+
+      {/* <MemoHook />
+      <CallbackHook />
+      <UseRef /> */}
+      {/* <MyContextApp /> */}
+      {/* <UseEffectHook /> */}
+      {/* <AppWindowListener/> */}
+
+      {/* <AppInterSectionApi/> */}
+
+      {/* <ShoppingCart /> */}
+      {/* <AddTodoApp /> */}
+      {/* <TodoReducerApp /> */}
+      <MyTodoApp />
     </div>
   );
 }
